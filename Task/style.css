@@ -1,0 +1,110 @@
+
+.services-section {
+    background-image: url(/img/background.jpeg);
+    padding: 40px 20px;
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 40px 20px;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+   
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    padding-top: 60px;  /* Increased padding top to accommodate icon */
+    text-align: center;
+    transition: transform 0.5s ease;
+    position: relative;  /* Added for icon positioning */
+    margin-top: 15px;   /* Added space for floating icon */
+   
+}
+
+.service-card:hover {
+    animation: rotate360 1s linear;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-container {
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;  
+    top: -35px;        
+    left: 50%;          
+    transform: translateX(-50%);    
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-title {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+    font-family: system-ui, sans-serif;
+}
+
+.service-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-weight: 800;
+}
+
+.explore-link {
+    color: #302163;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: system-ui, sans-serif;
+}
+
+.explore-link:hover {
+    color: #4f46e5;
+}
